@@ -7,7 +7,7 @@ const Links = [
 ]
 const NavabarLink = () => {
   return (
-    <ul className='flex gap-6 text-white font-semibold text-xl'>
+    <ul className='flex gap-6 text-white font-semibold text-xl lg:flex-row sm:flex-col lg:relative sm:absolute sm:top-[120%] left-[50%] -translate-x-[50%] lg:text-md sm:text-xl sm:bg-black backdrop-blur-lg lg:bg-black sm:w-full py-4 sm:text-center'>
       {Links.map((link,index) =>{
         return(
           <li key={index} className='group'>
