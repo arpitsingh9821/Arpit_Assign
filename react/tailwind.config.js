@@ -22,12 +22,17 @@ export default {
 //         // lightBrown: "#645550",
 //         Brown: "#2c2523",
         
+
+
+
+
 //       },
       
     },
     extend: {
       colors: {
-        // brown: "#53423e",
+        lightgrey: "#978580",
+        brown1: "#53423e",
         // lightBrown: "#645550",
         Brown: "#2c2523",
         
