@@ -7,7 +7,7 @@ const HomePic = () => {
         <img src="/Images/Adobe Express - file.png" alt="Error" className='h-[400px] w-[350px] rounded-full  bg-gradient-to-r from-cyan-400 to-orange-500 transition-all ease-in-out duration-[1.3s]
  hover:scale-[1.1]'/>
         <div className='  absolute -z-10 flex justify-center items-center animate-pulse '>
-        <FiHexagon className='md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-cyan-300 blur-md animate-[spin_20s_linear_infinite]'/> </div>
+        <FiHexagon className='md:h-[90%] sm:h-[100%] min-h-[600px] w-auto text-cyan-300 blur-md animate-[spin_20s_linear_infinite]'/> </div>
 
     </div>
     
