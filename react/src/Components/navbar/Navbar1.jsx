@@ -1,6 +1,6 @@
-import React from 'react'
-import Navbarlogo from './Navbarlogo'
-import NavabarLink from './NavabarLink'
+import React from 'react';
+import NavbarLogo from './NavbarLogo'
+import NavabarLink from './NavabarLink';
 import NavbarBtn from './NavbarBtn';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from 'react';
@@ -16,7 +16,7 @@ const navbar = () => {
     
         <nav className='m-w-[1300px] mx-auto px-4 w-full fixed left-[50%] -translate-x-[50%] z-20 flex gap-4 mt-2'>
             <div className='flex justify-between w-full max-w-[1200px] mx-auto bg-black items-center p-6 rounded-r-full rounded-l-full border-[0.5px] border-green-300'>
-         <Navbarlogo/>
+         <NavbarLogo/>
          <div className={`${menuOpen ? "sm:block" : "sm:hidden" } lg:block`}>
          <NavabarLink/>
          </div>
