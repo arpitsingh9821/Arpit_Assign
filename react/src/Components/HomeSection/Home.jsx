@@ -2,6 +2,7 @@ import React from 'react'
 import HomePic from './HomePic'
 import HomeText from './HomeText'
 import HomeBg from './HomeBg'
+import Home2 from './Home2'
 const Home = () => {
   return (
     <>
@@ -9,10 +10,12 @@ const Home = () => {
       <div className='flex w-full md:flex-row sm:flex-col  max-w-[1200px] mx-auto justify-between items-center relative px-4'>
       <HomeText/>
       <HomePic/>
-      <HomeBg/>
-
+      
+      
       </div>
+      <HomeBg/>
     </div>
+    {/* <div className='flex w-full md:flex-row sm:flex-col  max-w-[1200px] mx-auto justify-between items-center relative px-4'><Home2/></div> */}
     </>
   )
 }
