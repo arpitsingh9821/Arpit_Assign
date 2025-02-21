@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './Components/navbar/navbar'
+import Navbar1 from './Components/navbar/Navbar1'
 import Home from './Components/HomeSection/Home'
 const App = () => {
   return (
     <main className='font-body'>
-      <Navbar/>
+      <Navbar1/>
       <Home/>
     </main>
   )
