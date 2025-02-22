@@ -46,7 +46,8 @@ export default {
     },
     fontFamily:{
       body:['Josefin Sans'],
-      special:['Roboto']
+      special:['Roboto'],
+      logo:['Dancing Script']
     }
   },
   plugins: [],
