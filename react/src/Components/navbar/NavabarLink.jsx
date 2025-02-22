@@ -1,7 +1,7 @@
 import React from 'react'
 const Links = [
   {link:"About ME", section:"About"},
-  {link:"Academics", section:"academics"},
+  {link:"Academics", section:"Academics"},
   {link:"Projects", section:"projects"},
   {link:"Contact Me", section:"Contact"},
 ]
@@ -11,7 +11,7 @@ const NavabarLink = () => {
       {Links.map((link,index) =>{
         return(
           <li key={index} className='group'>
-            <a href="#" className='cursor-pointer hover:text-green-400 transition-all duration-500'>{link.link}</a>
+            <a href="Academics" className='cursor-pointer hover:text-green-400 transition-all duration-500'>{link.link}</a>
           <div className='mx-auto bg-green-300 w-0 group-hover:w-full h-[1px] transition-all duration-300'></div>
           </li>
         );
