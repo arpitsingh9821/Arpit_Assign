@@ -6,7 +6,7 @@ import Home2 from './Home2'
 const Home = () => {
   return (
     <>
-    <div className='pt-40 pb-16 sm:overflow-hidden lg:overflow-visible md:overflow-visible'>
+    <div id='Home' className='pt-40 pb-16 sm:overflow-hidden lg:overflow-hidden md:overflow-hidden'>
       <div className='flex w-full h-fit md:flex-row sm:flex-col  max-w-[1200px] mx-auto justify-between items-center relative px-4'>
       <HomeText/>
       <HomePic/>

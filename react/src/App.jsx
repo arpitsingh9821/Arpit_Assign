@@ -5,6 +5,7 @@ import AboutMe from './Components/AboutMe/AboutMe'
 import HelperSection from './Components/navbar/HelperSection'
 import Academics from './Components/Academics/Academics'
 import Skills from './Components/Skills/Skills'
+import SubSkill from './Components/Skills/SubSkill'
 const App = () => {
   return (
     <main className='font-body'>
@@ -13,6 +14,7 @@ const App = () => {
       <AboutMe/>
       <Academics/>
       <Skills/>
+      <SubSkill/>
       <HelperSection/>
     </main>
   )
