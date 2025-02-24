@@ -45,6 +45,7 @@ export default {
 
     },
     fontFamily:{
+      SpaceBet:['Julius Sans One'],
       body:['Josefin Sans'],
       special:['Roboto'],
       logo:['Dancing Script']

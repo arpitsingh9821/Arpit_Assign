@@ -66,7 +66,7 @@ const SkillSM = () => {
   return (
     <div className=' grid md:grid-cols-4 sm:grid-cols-2 gap-12 my-12'>
         {skills.map((item,index)=>{
-            return (<div key={index} className='hover:scale-[1.2] hover:text-green-200 flex flex-col items-center'><item.icon className=' text-7xl text-green-200'/>  
+            return (<div key={index} className='flex flex-col items-center'><item.icon className=' text-7xl text-green-200'/>  
                 <p className='text-center mt-4'> 
                     {item.Skill}
                     </p></div>

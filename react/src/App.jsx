@@ -6,6 +6,8 @@ import HelperSection from './Components/navbar/HelperSection'
 import Academics from './Components/Academics/Academics'
 import Skills from './Components/Skills/Skills'
 import SubSkill from './Components/Skills/SubSkill'
+import Project from './Components/Project/Project'
+import Contact from './Components/Contact/contact'
 const App = () => {
   return (
     <main className='font-body'>
@@ -15,6 +17,8 @@ const App = () => {
       <Academics/>
       <Skills/>
       <SubSkill/>
+      <Project/>
+      <Contact/>
       <HelperSection/>
     </main>
   )
