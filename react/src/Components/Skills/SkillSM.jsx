@@ -10,9 +10,8 @@ import { FaPhp } from "react-icons/fa";
 import { SiGoogleanalytics } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 import { FaCopyright } from "react-icons/fa";
-import { RiFileExcel2Fill } from "react-icons/ri";
-import { PiMicrosoftWordLogoFill } from "react-icons/pi";
-import SingleSkill from './SingleSkill';
+import { motion } from 'framer-motion'
+import {fadeIn} from '../../FramerMotion/Variant'
 
 const skills=[{
     Skill:"PYTHON",
@@ -66,10 +65,15 @@ const SkillSM = () => {
   return (
     <div className=' grid md:grid-cols-4 sm:grid-cols-2 gap-12 my-12'>
         {skills.map((item,index)=>{
-            return (<div key={index} className='flex flex-col items-center'><item.icon className=' text-7xl text-green-200'/>  
+            return (<motion.div
+            variants={fadeIn('up',0.2)}
+            initial='hidden' 
+            whileInView='show' 
+            viewport={{once:false, amount:0.7}}
+            key={index} className='flex flex-col items-center'><item.icon className=' text-7xl text-green-200'/>  
                 <p className='text-center mt-4'> 
                     {item.Skill}
-                    </p></div>
+                    </p></motion.div>
             )            
         })}
     </div>
