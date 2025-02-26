@@ -8,6 +8,7 @@ import Skills from './Components/Skills/Skills'
 import SubSkill from './Components/Skills/SubSkill'
 import Project from './Components/Project/Project'
 import Contact from './Components/Contact/contact'
+import Footer from './Components/Footer/Footer'
 const App = () => {
   return (
     <main className='font-body'>
@@ -19,6 +20,7 @@ const App = () => {
       <SubSkill/>
       <Project/>
       <Contact/>
+      <Footer/>
       <HelperSection/>
     </main>
   )
