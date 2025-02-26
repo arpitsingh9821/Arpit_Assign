@@ -7,7 +7,7 @@ import Academics from './Components/Academics/Academics'
 import Skills from './Components/Skills/Skills'
 import SubSkill from './Components/Skills/SubSkill'
 import Project from './Components/Project/Project'
-import Contact from './Components/Contact/contact'
+import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 const App = () => {
   return (
