@@ -10,7 +10,7 @@ const AboutMe = () => {
         variants={fadeIn('right',0.2)}
                  initial='hidden' 
                  whileInView='show' 
-                 viewport={{once:false, amount:0.7}}
+                 viewport={{once:false, amount:0.5}}
         >
         <AboutMeTxt/>
         </motion.div>
@@ -18,7 +18,7 @@ const AboutMe = () => {
          variants={fadeIn('left',0.2)}
                   initial='hidden' 
                   whileInView='show' 
-                  viewport={{once:false, amount:0.7}}
+                  viewport={{once:false, amount:0.5}}
         >
         <AboutMeImg/>
         </motion.div>

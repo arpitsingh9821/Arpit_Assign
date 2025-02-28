@@ -48,7 +48,8 @@ export default {
       SpaceBet:['Julius Sans One'],
       body:['Josefin Sans'],
       special:['Roboto'],
-      logo:['Dancing Script']
+      logo:['Dancing Script'],
+      admin:["Caveat"]
     }
   },
   plugins: [],
