@@ -13,15 +13,12 @@ const NavabarLink = () => {
       {Links.map((link,index) =>{
         return(
           <li key={index} className='group'>
-            <Link 
+            <Link
             to={link.section}
             smooth={true}
             spy={true}
             duration={800}
             offset={-130}
-
-
-
             className='cursor-pointer hover:text-green-400 transition-all duration-500'>{link.link}</Link>
           <div className='mx-auto bg-green-300 w-0 group-hover:w-full h-[1px] transition-all duration-300'></div>
           </li>

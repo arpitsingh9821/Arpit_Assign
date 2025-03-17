@@ -3,7 +3,9 @@ import AboutMeTxt from './AboutMeTxt'
 import AboutMeImg from './AboutMeImg'
 import { motion } from 'framer-motion'
 import {fadeIn} from '../../FramerMotion/Variant'
+
 const AboutMe = () => {
+ 
   return (
     <div id='About' className='flex md:flex-row sm:flex-col gap-12 px-4 max-w-[1200px] mx-auto mt-[100px] justify-between items-center '>
         <motion.div
