@@ -40,13 +40,21 @@ router.post('/signup', async (req, res, next) => {
 //login Authentication
 router.post('/login', async (req, res, next) => {
     try {
-        const { email, password } = req.body;
+        const { username, password } = req.body;
 
-        const user = await User.findOne({ email });
-        if (!user) return next(new createError('User not found', 404));
+        if (!username || !password) {
+            return next(createError(400, 'Username and password are required'));
+        }
 
+        // Find user by username
+        const user = await User.findOne({ username });
+
+        if (!user) return next(createError(404, 'User not found'));
+
+        // Compare the entered password with the stored hash
         const isPasswordValid = await bcrypt.compare(password, user.password);
-        if (!isPasswordValid) return next(new createError('Invalid credentials', 401));
+        if (!isPasswordValid) return next(createError(401, 'Invalid credentials'));
+
 
         // JWT Token
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {

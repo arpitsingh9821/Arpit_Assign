@@ -20,15 +20,15 @@ const useLogin = () => {
       });
 
       const data = await res.json();
-      console.log("API Response Status:", res.status);  // ✅ Log response status
-        console.log("API Response Data:", data);          // ✅ Log response data
+      console.log("API Response Status:", res.status); 
+        console.log("API Response Data:", data);      
 
         message.destroy();
   if (data.status === "success" && data.token) {
       message.success(data.message || "Login Successful");
       login(data.token, data.user);
     } else {
-      message.error(data.message || "Login Failed");
+      message.error("Wrong Username or Password");
     }
   } catch (error) {
     message.destroy();
