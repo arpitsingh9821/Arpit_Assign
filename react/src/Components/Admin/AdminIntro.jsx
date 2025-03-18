@@ -21,7 +21,7 @@ const AdminIntro = () => {
   
       if (response.data.success) {
         message.success(response.data.message);
-        window.location.reload();
+        // window.location.reload();
       } else {
         message.error(response.data.message);
       }
@@ -33,6 +33,7 @@ const AdminIntro = () => {
 
   return (
     <div className="mb-5 flex justify-center items-center w-full h-full">
+      
       <Form
         layout="vertical"
         initialValues={portfolio?.intro}
