@@ -44,7 +44,7 @@ const { isAuthenticated } = useAuth();
     <Router>
     {loading ? (<Loader />) : (
       <Routes>
-        <Route path="/Login" element={!isAuthenticated? <Login />: <Navigate to="/admin"/>} />
+        <Route path="/Login" element={!isAuthenticated? <Login />: <Navigate to="/Admin"/>} />
         <Route path="/" element={<HomeMain />} />
         <Route path="/Admin" element={isAuthenticated ? <AdminMain />: <Login/>} />
         {/* <Route path="/Admin" element={ <AdminMain />} /> */}
