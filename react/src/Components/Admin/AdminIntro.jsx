@@ -8,6 +8,29 @@ const AdminIntro = () => {
   const dispatch = useDispatch();
   const { portfolio } = useSelector((state) => state.root);
 
+  // const onFinish = async (values) => {
+  //   try {
+  //     dispatch(ShowLoading());
+  
+  //     const response = await axios.post('https://arpit-assign.onrender.com/api/portfolio/update-intro', {
+  //       ...values,
+  //       id: portfolio?.intro?._id,
+  //     });
+  
+  //     dispatch(HideLoading());
+  
+  //     if (response.data.success) {
+  //       message.success(response.data.message);
+  //       // window.location.reload();
+  //     } else {
+  //       message.error(response.data.message);
+  //     }
+  //   } catch (err) {
+  //     dispatch(HideLoading());
+  //     message.error("Error updating intro");
+  //   }
+  // };
+
   const onFinish = async (values) => {
     try {
       dispatch(ShowLoading());
@@ -21,7 +44,11 @@ const AdminIntro = () => {
   
       if (response.data.success) {
         message.success(response.data.message);
-        // window.location.reload();
+        
+        dispatch(SetPortfolioData({
+          ...portfolio, 
+          intro: { ...portfolio?.intro, ...values } 
+        }));
       } else {
         message.error(response.data.message);
       }
@@ -30,7 +57,6 @@ const AdminIntro = () => {
       message.error("Error updating intro");
     }
   };
-
   return (
     <div className="mb-5 flex justify-center items-center w-full h-full">
       
