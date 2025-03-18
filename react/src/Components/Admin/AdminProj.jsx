@@ -47,7 +47,7 @@ const AdminProj = () => {
   const deleteProject = async (id) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post('http://localhost:8000/api/portfolio/delete-project', { id });
+      const response = await axios.post('https://arpit-assign.onrender.com/api/portfolio/delete-project', { id });
 
       dispatch(HideLoading());
       if (response.data.success) {
