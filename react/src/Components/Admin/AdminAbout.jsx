@@ -19,7 +19,7 @@ const AdminAbout = () => {
     try {
       dispatch(ShowLoading());
 
-      const response = await axios.post('http://localhost:8000/api/portfolio/update-about', {
+      const response = await axios.post('https://arpit-assign.onrender.com/api/portfolio/update-about', {
         ...values,
         id: portfolio?.about?._id,
       });

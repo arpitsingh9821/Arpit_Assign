@@ -19,7 +19,7 @@ const AdminAcad = () => {
     try {
       dispatch(ShowLoading());
 
-      const response = await axios.post('http://localhost:8000/api/portfolio/update-academics', {
+      const response = await axios.post('https://arpit-assign.onrender.com/api/portfolio/update-academics', {
         ...values,
         id: portfolio?.academic?._id,
       });

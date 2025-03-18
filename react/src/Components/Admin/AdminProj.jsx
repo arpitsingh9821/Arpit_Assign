@@ -21,9 +21,9 @@ const AdminProj = () => {
       let response;
 
       if (selectedItemForEdit) {
-        response = await axios.post('http://localhost:8000/api/portfolio/update-project', { ...values, id: selectedItemForEdit._id });
+        response = await axios.post('https://arpit-assign.onrender.com/api/portfolio/update-project', { ...values, id: selectedItemForEdit._id });
       } else {
-        response = await axios.post('http://localhost:8000/api/portfolio/add-project', values);
+        response = await axios.post('https://arpit-assign.onrender.com/api/portfolio/add-project', values);
       }
 
       dispatch(HideLoading());
