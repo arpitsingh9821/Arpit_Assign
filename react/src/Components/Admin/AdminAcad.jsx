@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Input, message } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import { HideLoading, ShowLoading } from '../../redux/rootSlice';
+import { HideLoading, SetPortfolioData, ShowLoading } from '../../redux/rootSlice';
 import { useLocation } from 'react-router-dom';
 const { TextArea } = Input;
 
@@ -28,7 +28,10 @@ const AdminAcad = () => {
 
       if (response.data.success) {
         message.success(response.data.message);
-        reloadPage();
+        dispatch(SetPortfolioData({
+                        ...portfolio, 
+                        academic: { ...portfolio?.academic, ...values } 
+                      }));
       } else {
         message.error(response.data.message);
       }

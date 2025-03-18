@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Input, message } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import { HideLoading, ShowLoading } from '../../redux/rootSlice';
+import { HideLoading, SetPortfolioData, ShowLoading } from '../../redux/rootSlice';
 import { useLocation } from 'react-router-dom';
 const { TextArea } = Input;
 
@@ -11,9 +11,6 @@ const AdminAbout = () => {
   const { portfolio } = useSelector((state) => state.root);
   const location = useLocation(); // ✅ Move useLocation inside the component
 
-  const reloadPage = () => {
-    window.location.href = location.pathname; // Reload and stay on the same page
-  };
 
   const onFinish = async (values) => {
     try {
@@ -28,7 +25,11 @@ const AdminAbout = () => {
 
       if (response.data.success) {
         message.success(response.data.message);
-        reloadPage();
+
+        dispatch(SetPortfolioData({
+                 ...portfolio, 
+                 about: { ...portfolio?.about, ...values } 
+               }));
       } else {
         message.error(response.data.message);
       }
