@@ -18,7 +18,7 @@ const { isAuthenticated } = useAuth();
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.get(`http://localhost:8000/api/portfolio/get-portfolio-data`);
+      const response = await axios.get(`https://arpit-assign.onrender.com/api/portfolio/get-portfolio-data`);
       dispatch(SetPortfolioData(response.data));
       dispatch(ReloadData(false))
       dispatch(HideLoading());
