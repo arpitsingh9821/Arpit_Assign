@@ -9,6 +9,7 @@ connection.on('error', () => {
 });
 connection.on('connected', () => {
     console.log('Connected to MongoDB');
+    
 });
 
 module.exports = connection;
